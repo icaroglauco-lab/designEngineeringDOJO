@@ -10,6 +10,11 @@ import cheerio from 'cheerio';
 const fs = require('fs');
 const yaml = require('js-yaml');
 
+// Yargs for cli usage completion
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
+
 const url = 'https://collectui.com/challenges/user-profile';
 const historyFile = `${process.cwd()}/history.yml`;
 
@@ -49,7 +54,7 @@ async function RandomCoolDesignScrapper(fromUrl:string = url) : Promise<string>{
 
 // !Entry if its running as cli
 if (require.main === module) {
-    RandomCoolDesignScrapper()
+    RandomCoolDesignScrapper(argv['from'])
     .then(result => console.log(result));
 }
 
