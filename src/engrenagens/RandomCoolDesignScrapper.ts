@@ -1,5 +1,5 @@
 /* 
-    Scrapper é a engrenagem que tem responsabilidade de fazer scrap em uma determinada (ou padrão) url de designs
+    RandomCoolDesignScrapper é a engrenagem que tem responsabilidade de fazer scrap em uma determinada (ou padrão) url de designs
  e retorna uma aleatória, respeitando um arquivo de histórico yaml para não haver repetição.
     De certa forma, é o core da aplicação, sendo a primeira a ser escrita.
  */
